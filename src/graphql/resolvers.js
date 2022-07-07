@@ -12,6 +12,4 @@ const resolversArray = loadFilesSync(
 
 const resolvers = mergeResolvers(resolversArray);
 
-console.log(resolvers);
-
 export default resolvers;

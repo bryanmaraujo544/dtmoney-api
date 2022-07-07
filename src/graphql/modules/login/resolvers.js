@@ -2,9 +2,8 @@ import { UserInputError } from 'apollo-server';
 import User from '../../../models/User';
 
 export default {
-  Query: {
+  Mutation: {
     login: async (_, { email, password }) => {
-      console.log({ email, password });
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -15,7 +14,7 @@ export default {
         throw new UserInputError('Password is wrong');
       }
 
-      return true;
+      return { _id: user._id, firtName: user.firstName };
     },
   },
 };
