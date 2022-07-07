@@ -29,5 +29,9 @@ export default {
       });
       return transaction;
     },
+    deleteTransaction: async (_, { _id }) => {
+      const transaction = await Transaction.deleteOne({ _id });
+      return !!transaction;
+    },
   },
 };
