@@ -33,5 +33,21 @@ export default {
       const transaction = await Transaction.deleteOne({ _id });
       return !!transaction;
     },
+    updateTransaction: async (_, { _id, title, type, category, amount }) => {
+      console.log(_id);
+      await Transaction.updateOne(
+        { _id },
+        {
+          $set: {
+            title,
+            type,
+            category,
+            amount,
+          },
+        }
+      );
+      const transaction = await Transaction.findById(_id);
+      return transaction;
+    },
   },
 };
