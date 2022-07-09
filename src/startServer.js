@@ -14,7 +14,9 @@ function startServer({ typeDefs, resolvers }) {
       credentials: true,
     },
   });
-  server.listen().then(({ url }) => console.log(`🔥 Server running at ${url}`));
+  server
+    .listen({ port: process.env.PORT || 4000 })
+    .then(({ url }) => console.log(`🔥 Server running at ${url}`));
 }
 
 export default startServer;

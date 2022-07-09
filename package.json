@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js -e js,gql"
+    "dev": "nodemon --exec babel-node src/index.js -e js,gql",
+    "start": "babel-node src/index.js"
   },
   "dependencies": {
     "@graphql-tools/load-files": "^6.6.0",
