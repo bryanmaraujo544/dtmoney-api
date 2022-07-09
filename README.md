@@ -14,7 +14,7 @@ The user can create income or outcome financial transactions. A summary is displ
 
 It's a GraphQL Api made with Node.js.
 
-API:https://github.com/bryanmaraujo544/dtmoney-api
+Front-end:https://github.com/bryanmaraujo544/dtmoney
 
 ## 🚀 Technologies used in project
 
